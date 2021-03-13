@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="container">
-        @component('components.navbar')
+        @component('components.navbar', [ "current" => $current ])
         @endcomponent
 
         <main role="main">
