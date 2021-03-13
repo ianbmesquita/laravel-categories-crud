@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+    <style>
+        .navbar {
+            margin-bottom: 20px;
+        }
+    </style>
+
     <title>Cadastro</title>
 </head>
 <body>
