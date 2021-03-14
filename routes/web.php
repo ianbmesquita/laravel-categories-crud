@@ -25,3 +25,5 @@ Route::get('/categories', [CategoriesController::class, 'index']);
 Route::get('/categories/new', [CategoriesController::class, 'create']);
 Route::post('/categories', [CategoriesController::class, 'store']);
 Route::get('/categories/{id}/destroy', [CategoriesController::class, 'destroy']);
+Route::get('/categories/{id}/edit', [CategoriesController::class, 'edit']);
+Route::post('/categories/{id}', [CategoriesController::class, 'update']);
