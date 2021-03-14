@@ -5,6 +5,7 @@
         <div class="card-body">
             <h5 class="card-title"><strong>Produtos cadastrados</strong></h5>
 
+            @if (count($products) > 0)
                 <table class="table table-ordered table-hover">
                     <thead>
                         <tr>
@@ -31,6 +32,7 @@
                         @endforeach
                     </tbody>
                 </table>
+            @endif
 
         </div>
 
