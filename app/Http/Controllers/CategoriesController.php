@@ -15,7 +15,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('categories.show', compact('categories'));
+        return view('screens.categories.show', compact('categories'));
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('categories.new');
+        return view('screens.categories.new');
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoriesController extends Controller
         $category = Category::find($id);
 
         if (isset($category)) {
-            return view('categories.edit', compact('category'));
+            return view('screens.categories.edit', compact('category'));
         }
 
         return redirect('/categories');
