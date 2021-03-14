@@ -19,11 +19,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+//Products routes
 Route::get('/products', [ProductsController::class, 'index']);
 Route::get('/products/new', [ProductsController::class, 'create']);
 Route::post('/products', [ProductsController::class, 'store']);
 Route::get('/products/{id}/destroy', [ProductsController::class, 'destroy']);
+Route::get('/products/{id}/edit', [ProductsController::class, 'edit']);
+Route::post('/products/{id}', [ProductsController::class, 'update']);
 
+//Categories routes
 Route::get('/categories', [CategoriesController::class, 'index']);
 Route::get('/categories/new', [CategoriesController::class, 'create']);
 Route::post('/categories', [CategoriesController::class, 'store']);

@@ -69,7 +69,14 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+
+        if (isset($product)) {
+            $categories = Category::all();
+            return view('screens.products.edit', compact(["product", "categories"]));
+        }
+
+        return redirect('/products');
     }
 
     /**
@@ -81,7 +88,17 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+
+        if (isset($product)) {
+            $product->name = $request->input('name');
+            $product->stock = $request->input('stock');
+            $product->price = $request->input('price');
+            $product->category_id = $request->input('category_id');
+           $product->save();
+        }
+
+        return redirect('/products');
     }
 
     /**
