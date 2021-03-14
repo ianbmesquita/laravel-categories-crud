@@ -14,7 +14,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        return view('categories.show');
+        $categories = Category::all();
+        return view('categories.show', compact('categories'));
     }
 
     /**
@@ -38,6 +39,8 @@ class CategoriesController extends Controller
         $category = new Category();
         $category->name = $request->input('name');
         $category->save();
+
+        return redirect('/categories');
     }
 
     /**
