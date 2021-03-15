@@ -13,6 +13,7 @@
                             <td>Nome</td>
                             <td>Estoque</td>
                             <td>Preço</td>
+                            <td>Categoria</td>
                             <td>Ações</td>
                         </tr>
                     </thead>
@@ -24,6 +25,13 @@
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->stock }}</td>
                                 <td>{{ $product->price }}</td>
+                                <td>
+                                    @foreach ($categories as $category)
+                                        @if ($product->category_id == $category->id)
+                                            {{ $category->name  }}
+                                        @endif
+                                    @endforeach
+                                </td>
                                 <td>
                                     <a href="/products/{{ $product->id }}/edit" class="btn btn-primary btn-sm">Editar</a>
                                     <a href="/products/{{ $product->id }}/destroy" class="btn btn-danger btn-sm">Excluir</a>
