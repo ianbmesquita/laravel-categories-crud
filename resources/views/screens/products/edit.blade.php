@@ -8,17 +8,17 @@
                 @csrf
                 <div class="form-group">
                     <label for="name">Nome do produto: </label>
-                    <input type="text" class="form-control" name="name" id="name"  value={{ $product->name }} placeholder="Produto">
+                    <input type="text" class="form-control" name="name" id="name"  value="{{ $product->name }}" placeholder="Produto">
                 </div>
 
                 <div class="form-group">
                     <label for="name">Quantidade no estoque: </label>
-                    <input type="text" class="form-control" name="stock" id="stock" value={{ $product->stock }} placeholder="Quantidade">
+                    <input type="text" class="form-control" name="stock" id="stock" value="{{ $product->stock }}" placeholder="Quantidade">
                 </div>
 
                 <div class="form-group">
                     <label for="name">Preço (unidade): </label>
-                    <input type="text" class="form-control" name="price" id="price" value={{ $product->price }} placeholder="Preço">
+                    <input type="text" class="form-control" name="price" id="price" value="{{ $product->price }}" placeholder="Preço">
                 </div>
 
                 <div class="form-group">
